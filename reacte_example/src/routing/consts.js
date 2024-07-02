@@ -1,0 +1,8 @@
+export const MAIN_ROUTE = '/'
+export const SIGN_IN_ROUTE = '/signIn'
+export const SIGN_UP_ROUTE = '/signUp'
+export const ACCOUNT_ROUT = '/account'
+export const BLOGS_ROUTE = '/blogs'
+export const MY_BLOGS_ROUTE = '/myBlogs'
+export const VIDEOS_ROUT = '/videos'
+export const MY_VIDEOS_ROUT = '/myVideos'
