@@ -1,11 +1,10 @@
-import {BrowserRouter, useNavigate} from "react-router-dom";
-import Header from "./components/Header";
+import {BrowserRouter} from "react-router-dom";
 import AppRouter from './routing/AppRouter'
-import Footer from "./components/Footer";
+import Home from "./components/pages/home/Home.jsx";
 
-import './style/style.css'
+import './index.css'
 import {useEffect, useState} from "react";
-import {refreshToken} from "./http/userApi";
+import {refreshToken} from "./api/userApi";
 import {useDispatch} from "react-redux";
 import {setAuthAction} from "./store/userReducers";
 
@@ -21,7 +20,7 @@ function App() {
         dispatch(setAuthAction(data))
         setLoading(false)
       })
-        .catch(e => {
+        .catch(() => {
           localStorage.clear()
           window.location.reload();
         })
@@ -31,15 +30,14 @@ function App() {
   }, [])
 
   if (loading) {
-    return <div style={{backgroundColor: "#272727", minHeight: "100vh"}}></div>
+    return <div></div>
   }
 
   return (
-    <div style={{backgroundColor: "#272727", minHeight: "100vh"}}>
+    <div>
       <BrowserRouter>
-        <Header/>
+        <Home/>
         <AppRouter/>
-        <Footer/>
       </BrowserRouter>
     </div>
   );

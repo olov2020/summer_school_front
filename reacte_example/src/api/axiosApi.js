@@ -1,4 +1,5 @@
 import axios from "axios";
+import process from "../../.eslintrc.cjs";
 
 export const $host = axios.create({
   baseURL: process.env.REACT_APP_SERVER_URL

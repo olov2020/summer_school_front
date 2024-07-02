@@ -1,4 +1,4 @@
-import {$authHost} from "."
+import {$authHost} from "./axiosApi.js"
 
 export const getAllProjects = async () => {
   const {data} = await $authHost.get('/api/project/allProjects')
