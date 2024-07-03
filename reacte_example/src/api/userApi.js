@@ -1,5 +1,5 @@
 import {$host, $authHost} from './axiosApi.js'
-import jwt_decode from 'jwt-decode'
+import {jwtDecode} from 'jwt-decode'
 
 
 export const userLogin = async ({email, password}) => {
@@ -9,8 +9,8 @@ export const userLogin = async ({email, password}) => {
     }
   })
 
-  localStorage.setItem('token', data.token)
-  return jwt_decode(data.token)
+  localStorage.setPost('token', data.token)
+  return jwtDecode(data.token)
 }
 
 export const userRegistration = async ({email, fullName, password}) => {
@@ -20,18 +20,18 @@ export const userRegistration = async ({email, fullName, password}) => {
     }
   })
 
-  localStorage.setItem('token', data.token)
-  return jwt_decode(data.token)
+  localStorage.setPost('token', data.token)
+  return jwtDecode(data.token)
 }
 
 export const refreshToken = async () => {
   const {data} = await $authHost.get('/api/user/auth')
 
   localStorage.setItem('token', data.token)
-  return jwt_decode(data.token)
+  return jwtDecode(data.token)
 }
 
-export const getAllTasks = async () => {
+export const getAllPosts = async () => {
   const {data} = await $authHost.get('/api/user/getTasks')
 
   return data
@@ -51,5 +51,5 @@ export const updateUser = async (newUserData) => {
   })
 
   localStorage.setItem('token', data.token)
-  return jwt_decode(data.token)
+  return jwtDecode(data.token)
 }

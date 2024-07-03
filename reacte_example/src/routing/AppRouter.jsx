@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import {Navigate, Route, Routes} from "react-router-dom";
-import {authRoutes, publicRoutes} from "./routes";
+import {authRoutes, publicRoutes} from "./routes.jsx";
 
 const AppRouter = () => {
 
@@ -16,7 +16,7 @@ const AppRouter = () => {
         return <Route key={path} path={path} element={Element}/>
       })}
 
-      <Route path="*" element={<Navigate to="/"/>}/>
+      <Route path="*" element={<Navigate to="/notFound"/>}/>
 
     </Routes>
   )

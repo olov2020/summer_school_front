@@ -1,31 +1,32 @@
 import "./header.css"
+import {Link} from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <a href="/" className="header__title">
+      <Link to="/" className="header__title">
         <div>
           <h1>Домашняя</h1>
         </div>
-      </a>
+      </Link>
 
-      <a href="/Blog" className="header__title">
+      <Link to="/Blog" className="header__title">
         <div>
           <h1>Посты</h1>
         </div>
-      </a>
+      </Link>
 
-      <a href="/Video" className="header__title">
+      <Link to="/Video" className="header__title">
         <div>
           <h1>Видео-семинары</h1>
         </div>
-      </a>
+      </Link>
 
-      <a href="/Account" className="header__title">
+      <Link to="/Account" className="header__title">
         <div>
           <h1>Личный кабинет</h1>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

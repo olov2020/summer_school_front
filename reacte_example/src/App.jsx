@@ -1,6 +1,5 @@
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from './routing/AppRouter'
-import Home from "./components/pages/home/Home.jsx";
 
 import './index.css'
 import {useEffect, useState} from "react";
@@ -36,7 +35,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Home/>
         <AppRouter/>
       </BrowserRouter>
     </div>

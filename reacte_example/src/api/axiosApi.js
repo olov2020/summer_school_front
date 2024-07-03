@@ -1,12 +1,11 @@
 import axios from "axios";
-import process from "../../.eslintrc.cjs";
 
 export const $host = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_URL
+  baseURL: import.meta.env.REACT_APP_URL,
 })
 
 export const $authHost = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_URL
+  baseURL: import.meta.env.REACT_APP_URL,
 })
 
 const authInterceptor = config => {

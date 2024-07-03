@@ -1,25 +1,26 @@
 import './home.css'
+import {Link} from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="home">
-      <a href="/Blog" className="home__title">
+      <Link to="/blog" className="home__title">
         <div>
           <h1>Посты</h1>
         </div>
-      </a>
+      </Link>
 
-      <a href="/Video" className="home__title">
+      <Link to="/video" className="home__title">
         <div>
           <h1>Видео-семинары</h1>
         </div>
-      </a>
+      </Link>
 
-      <a href="/Account" className="home__title">
+      <Link to="/account" className="home__title">
         <div>
           <h1>Личный кабинет</h1>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

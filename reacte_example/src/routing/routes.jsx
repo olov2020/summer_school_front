@@ -4,39 +4,29 @@ import Registration from "../components/pages/Registration.jsx";
 import Account from "../components/pages/account/Account.jsx";
 import Blog from "../components/pages/blog/Blog.jsx";
 import Video from "../components/pages/video/Video.jsx";
-import MyBlog from "../components/pages/myBlog/MyBlog.jsx";
-import MyVideo from "../components/pages/myVideo/MyVideo.jsx";
+import NoPage from "../components/pages/NoPage.jsx";
 
 import {
   MAIN_ROUTE,
   SIGN_IN_ROUTE,
   SIGN_UP_ROUTE,
-  ACCOUNT_ROUT,
+  ACCOUNT_ROUTE,
   BLOGS_ROUTE,
-  MY_BLOGS_ROUTE,
-  VIDEOS_ROUT,
-  MY_VIDEOS_ROUT,
+  VIDEOS_ROUTE,
+  NO_PAGE_ROUTE,
 } from "./consts"
 
 export const authRoutes = [
   {
-    path: ACCOUNT_ROUT,
+    path: ACCOUNT_ROUTE,
     Element: <Account/>,
-  },
-  {
-    path: MY_BLOGS_ROUTE,
-    Element: <MyBlog/>,
-  },
-  {
-    path: MY_VIDEOS_ROUT,
-    Element: <MyVideo/>,
   },
 ]
 
 export const publicRoutes = [
   {
     path: MAIN_ROUTE,
-    Element: <Home/>
+    Element: <Home/>,
   },
   {
     path: SIGN_IN_ROUTE,
@@ -51,7 +41,11 @@ export const publicRoutes = [
     Element: <Blog/>,
   },
   {
-    path: VIDEOS_ROUT,
+    path: VIDEOS_ROUTE,
     Element: <Video/>,
+  },
+  {
+    path: NO_PAGE_ROUTE,
+    Element: <NoPage/>,
   },
 ]

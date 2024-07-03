@@ -4,7 +4,7 @@ import style from "./account.module.css"
 import Info from "./info/Info.jsx";
 
 // eslint-disable-next-line react/prop-types
-function Account({image}) {
+function Account() {
   const info = {
     name: 'Vladimir',
     surname: 'Vinogradov',
@@ -16,8 +16,6 @@ function Account({image}) {
       <Header/>
 
       <div className={style.account}>
-        <img src={image} alt="profile photo"/>
-
         {/* eslint-disable-next-line react/prop-types */}
         <Info name={info.name} surname={info.surname} email={info.email}/>
       </div>
